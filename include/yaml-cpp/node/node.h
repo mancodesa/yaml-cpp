@@ -62,15 +62,15 @@ class YAML_CPP_API Node {
 
   YAML::Mark Mark() const;
   NodeType::value Type() const;
-  bool IsDefined() const;
+  bool IsSet() const;
   bool IsNull() const { return Type() == NodeType::Null; }
   bool IsScalar() const { return Type() == NodeType::Scalar; }
   bool IsSequence() const { return Type() == NodeType::Sequence; }
   bool IsMap() const { return Type() == NodeType::Map; }
 
   // bool conversions
-  explicit operator bool() const { return IsDefined(); }
-  bool operator!() const { return !IsDefined(); }
+  explicit operator bool() const { return IsSet(); }
+  bool operator!() const { return !IsSet(); }
 
   // access
   template <typename T>
