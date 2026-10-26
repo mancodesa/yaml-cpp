@@ -80,7 +80,7 @@ inline void Node::Invalidate() {
   m_pMemory = nullptr;
 }
 
-inline bool Node::IsDefined() const {
+inline bool Node::IsSet() const {
   if (!m_isValid) {
     return false;
   }
