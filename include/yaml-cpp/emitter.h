@@ -113,7 +113,7 @@ class YAML_CPP_API Emitter {
 
  private:
   void EmitBeginDoc();
-  void EmitEndDoc();
+  void EmitEndDocument();
   void EmitBeginSeq();
   void EmitEndSeq();
   void EmitBeginMap();
