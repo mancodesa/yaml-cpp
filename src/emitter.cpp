@@ -107,7 +107,7 @@ Emitter& Emitter::SetLocalValue(EMITTER_MANIP value) {
       EmitBeginDoc();
       break;
     case EndDoc:
-      EmitEndDoc();
+      EmitEndDocument();
       break;
     case BeginSeq:
       EmitBeginSeq();
@@ -178,8 +178,8 @@ void Emitter::EmitBeginDoc() {
   m_pState->StartedDoc();
 }
 
-// EmitEndDoc
-void Emitter::EmitEndDoc() {
+// EmitEndDocument
+void Emitter::EmitEndDocument() {
   if (!good())
     return;
 
