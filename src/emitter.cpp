@@ -193,7 +193,8 @@ void Emitter::EmitEndDoc() {
     return;
   }
 
-  if (m_stream.col() > 0)
+  const bool midLine = m_stream.col() > 0;
+  if (midLine)
     m_stream << "\n";
   m_stream << "...\n";
 }
