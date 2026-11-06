@@ -309,6 +309,9 @@ void Emitter::PrepareTopNode(EmitterNodeType::value child) {
   if (child == EmitterNodeType::NoType)
     return;
 
+  m_pState->SetError("Unexpected top-level node");
+  return;
+
   if (m_pState->CurGroupChildCount() > 0 && m_stream.col() > 0
     && !m_pState->HasBegunContent()) {
     EmitBeginDoc();
