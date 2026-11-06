@@ -183,6 +183,9 @@ void Emitter::EmitEndDoc() {
   if (!good())
     return;
 
+  m_pState->SetError("Unexpected end document");
+  return;
+
   if (m_pState->CurGroupType() != GroupType::NoType) {
     m_pState->SetError("Unexpected begin document");
     return;
